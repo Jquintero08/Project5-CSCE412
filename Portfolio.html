@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Landing Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="stylesheetID" link rel="stylesheet" href="Style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body id ="Portfolio">
+    <div class="banner">
+        <div class="Bar">
+            <a href="https://www.tamu.edu" class="logo-link">
+                <img src="InteractivePhotos/A&MIcon.png" alt="A&M Logo" class="logo">
+            </a>
+            <button id="toggleButton" style="margin: 10px;">Switch Style</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="Qualifications.html">Qualifications</a></li>
+                <li><a href="Service.html">Service</a></li>
+                <li><a href="Gallery.html">Personal Gallery</a></li>
+            </ul>
+        </div>
+
+        <div id="all-projects" class="Projects">
+            <h1>My Portfolio</h1>
+            <div class = "P1P2">
+                <div class = "Project1">
+                    <h2>Reviewstar.tech     
+                        <a href="https://github.com/martin-jimenez-01/Reviewstar" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </h2>
+                    <div class = "Project1-hold">
+                        <div class = "Project1-text">
+                            <p>Reviewstar is a platform designed to help pinpoint problem areas in American Airline airports. To accomplish this website, we split up into two subteams: front end and back end. The back end team focused on the web-scrapping and processing that data via sentiment analyis to determine the most common complaints per airport. Front end team used HTML, CSS and Javascript to create the web app that displays our findings.</p>
+                        </div>
+                        <div class = "Project1-image">
+                            <img src="InteractivePhotos/Reviewstar.png" alt="Project 1 Image">
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class = "Project2">
+                    <h2>Building a Processor</h2>
+                    <div class = "Project2-hold">
+                        <div class = "Project2-text">
+                            <p>During the time of creating this project, a partner and I were tasked with building a functioning processor through the use of Assembly and Verilog. We had to build different components of it such as the ALU, Control Unit, Sign Extender, DataMemory, and InstructionMemory. Once this was completed, we built a test bench to test the functionality of our processor and verified it was correct through the user of ARMv8 code to see if the proper registers were being accessed.</p>
+                        </div>
+                        <div class = "Project2-image">
+                            <img src="InteractivePhotos/Processor.png" alt="Project 2 Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "P3P4">
+                <div class = "Project3">
+                    <h2>List & Queue</h2>
+                    <div class = "Project3-hold">
+                        <div class = "Project3-text">
+                            <p>Although this is not a very challenging project, it was important to me as a student because it was the breakpoint to where I started to understand Data Structures and Algorithms because of my TA. They helped me understand how the List & Queue would work and how they are similar and how they are different. Once this project was completed, the rest of the class was made easier.</p>
+                        </div>
+                        <div class = "Project3-image">
+                            <img src="InteractivePhotos/List&Queue.png" alt="Project 3 Image">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class = "Project4">
+                    <h2>Dungeon Crawler</h2>
+                    <div class = "Project4-hold">
+                        <div class = "Project4-text">
+                            <p>Again... this is nowhere near one of the hardest projects I've worked on it, it is one that I am most proud of. With the experience I had and the little assistance that I reached out for, I'm proud of myself for completing this project. The point of the project was to make an adventure game inside the terminal that would change based on where the user was in the array. The commands of the game are in the picture to the right. You would get to pick a file that had a pre-made level and play through it until completion.</p>
+                        </div>
+                        <div class = "Project4-image">
+                            <img src="InteractivePhotos/DungeonCrawler.png" alt="Project 4 Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+
+    
+        </div>
+
+    </div>
+
+
+
+    <script>
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom >= 0
+            );
+        }
+
+        const aboutMe = document.getElementById('about-me');
+
+        window.addEventListener('scroll', function() {
+            if (isInViewport(aboutMe)) {
+                aboutMe.classList.add('fade-in');
+            }
+        });
+    </script>
+
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelectorAll('.Project1, .Project2, .Project3, .Project4').forEach(function (el) {
+                el.classList.add('animate-on-load');
+            });
+            setTimeout(() => {
+                document.querySelectorAll('.Project1, .Project2, .Project3, .Project4').forEach(function (el) {
+                    el.classList.remove('animate-on-load');
+                });
+            }, 1000);
+        });
+    </script>
+
+    <script src="Toggle.js"></script>
+
+</body>
+</html>

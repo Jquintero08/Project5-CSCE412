@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Landing Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="stylesheetID" link rel="stylesheet" href="Style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body id ="Qualifications">
+    <div class="banner">
+        <div class="Bar">
+            <a href="https://www.tamu.edu" class="logo-link">
+                <img src="InteractivePhotos/A&MIcon.png" alt="A&M Logo" class="logo">
+            </a>
+            <button id="toggleButton" style="margin: 10px;">Switch Style</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="Qualifications.html">Qualifications</a></li>
+                <li><a href="Service.html">Service</a></li>
+                <li><a href="Gallery.html">Personal Gallery</a></li>
+            </ul>
+        </div>
+
+        <div id="all-box1" class="page">
+            <h1>Qualifications</h1>
+
+                <div class = "allBox">
+                    <div class = "Contain">
+                        <div class = "Resume">
+                            <a href="Resume - Jacob Quintero.pdf" download>
+                                <img src="InteractivePhotos/JacobQuinteroResume.png" alt="Resume" class="ResumePic">
+                            </a>
+                            <p class="download-text">(Click on image to download)</p>
+                        </div>
+                    </div>
+                    
+                    <div class = "right">
+                        <div class = "ContainTechnical">
+                            <div class = "Technical">
+                                <h2>Technical Skills</h2>
+                                <div class = "box">
+                                <div class = "Technical-Text">
+                                    <p>- Proficient in <span class="bold">Python</span> from different coursework and side projects. Gained the most experience from it through the Summer of 2023 PATHS-UP Research. </p>
+                                    <p>- Proficient in <span class="bold">C++</span> from different coursework. Gained most of my data structures and algorithms experience in the form of C++. </p>
+                                    <p>- Developed a robust proficiency in <span class="bold">Microsoft 365</span> applications, thanks to extensive, hands-on experience throughout my undergrad and high school education. </p>
+                                    <p>- Deep understanding of the electrical components of Computer Engineering, particularly in the areas of <span class="bold">Verilog and ARMv8</span>. I've applied this expertise in various academic courses and even leveraged it in the design of my own processor.</p>
+                                    <p>- Independently acquired most of my current knowledge of <span class="bold">HTML, CSS, and JavaScript</span> during my personal time. These skills extensively supported the development in creating this website. Additionally, I've leveraged these capabilities to assist in the development of a specialized webpage designed to showcase data problem areas from a recent hackathon</p>
+                                    <p>- Some proficiency in <span class="bold">MATLAB</span> due to some coursework taken at a previous institution before transferring.</p>
+                                    <p>- High understanding of <span class="bold">Windows and MacOS</span> from the use of these products for over a decade. Great understanding of <span class = "bold">Linux</span> from coursework and self-research.</p>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "ContainWhy">
+                            <div class = "Why">
+                                <h2>Areas of Interest</h2>
+                                <div class = "Why2">
+                                    <div class = "Why-Text1">
+                                        <h3>Software Engineering</h3>
+                                        <p>I have a strong passion for careers in Software Engineering because of the amount of creativity that one can put into it. The limits to what you can design are almost none due to the vast computing power of modern computers. The task of debugging also excites me (although it might not be appealing to most) because debugging is almost like a puzzle. Since I thoroughly enjoy the mystery that comes along with a puzzle, I love being able to incorporate them into my work. Debugging is a relatively easy task if approached with the right demeanor and strategy. Beyond this, Software Engineering has a plethora of career opportunities, including the promise of a high salary, which is good to have when planning to have a future family that is financially stable. </p>
+                                    </div>
+                                    <div class = "Why-Text2">
+                                        <h3>Artificial Intelligence</h3>
+                                        <p>I am deeply fascinated by the prospect of diving into the realm of Artificial Intelligence (AI) because of how transformative it has been on modern life within just the past year alone. As we stand at the forefront of an accelerating wave of technological innovation, one can only contemplate not if but how far Artificial Intelligence will take us over the coming decade. However, with this fast-paced innovation, there also arises a need for ethical vigilance and informed discourse to govern the extent of AI's reach. I have some perspectives on this matter and would love to bring them to the tables of the people currently developing AI to allow for the mitigation of the potential effects AI will have on our society.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelectorAll('.Project1, .Project2, .Project3, .Project4').forEach(function (el) {
+                el.classList.add('animate-on-load');
+            });
+            setTimeout(() => {
+                document.querySelectorAll('.Project1, .Project2, .Project3, .Project4').forEach(function (el) {
+                    el.classList.remove('animate-on-load');
+                });
+            }, 1000);
+        });
+    </script>
+
+
+    <script src="Toggle.js"></script>
+
+
+</body>
+</html>
+
+

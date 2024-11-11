@@ -1,0 +1,763 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bubblegum Sans', cursive;
+    box-sizing: border-box;
+}
+
+#toggleButton {
+    background: linear-gradient(to right, #bd6c6c, #500000);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    font-weight: bold;
+
+}
+  
+
+
+#toggleButton:hover {
+    background: linear-gradient(to right, #724242, #1f0000);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+#toggleButton:active {
+    transform: scale(0.95);
+  }
+
+
+body {
+    color: #333;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(1, 171, 250, 0.5)), url(Zach.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    
+}
+
+
+.Bar {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: -160px;
+    width: 200px;
+    height: 100%;
+    background-color: #0077b6;
+    overflow-y: auto;
+    transition: right 0.5s ease;
+}
+  
+.Bar:hover {
+    right: 0;
+}
+  
+.Bar::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    box-shadow: 0 5px white, 0 -5px white;
+}
+  
+.Bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.Bar ul li {
+    padding: 8px;
+    text-align: center;
+  }
+  
+.Bar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+  
+  .Bar ul li a:hover {
+    background-color: #2a4d64;
+}
+
+
+.logo-link {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+}
+  
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.intro-section {
+    display: flex;
+    flex-direction: column-reverse; 
+    align-items: center;
+    padding: 2rem;
+}
+
+.intro-text {
+    padding: 1rem;
+    background: linear-gradient(45deg, #0077b6, #0077b6, #048a81, #06d6a0, #ffffff);
+    background-size: 200% 200%;
+    color: #ffffff;
+    animation: gradientBG 10s ease infinite;
+    border-radius : 40px;
+}
+
+.social-icons a{
+    margin: 0 10px;
+    font-size: 35px;
+    color: #ffffff; 
+
+}
+
+
+
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.intro-image img {
+    max-height: 700px;
+    max-width: 600px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 25px #000;
+    margin-bottom: 20px; 
+}
+
+
+.Information {
+    background: linear-gradient(to bottom, #ffffff, #048a81, #0077b6);
+
+    background-size: 200% 200%;
+    animation: Gradient 10s ease infinite;
+    padding-right: 2.5%;
+}
+
+@keyframes Gradient {
+    0% {background-position: 100% 0%;}
+    50% {background-position: 0% 100%;}
+    100% {background-position: 100% 0%;}
+}
+
+.Journey, .interests, .skills {
+    transform: rotate(-5deg);
+    margin: 3.25rem;
+    padding: 1rem 2rem;
+    max-width: 95%;
+    background-color: rgba(243, 243, 243, 0.8);
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+    transition: transform .2s;
+    font-size: 25px;
+}
+
+.Journey > *, .interests > *, .skills > * {
+    transform: rotate(5deg);
+}
+
+.interests .workout-image {
+    transform: rotate(0deg);
+}
+
+.skills-pic .skills-image{
+    transform: rotate(-5deg);
+}
+
+.Journey:hover, .interests:hover, .skills:hover {
+    transform: scale(1.05);
+}
+
+.Journey::before, .interests::before, .skills::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+
+    pointer-events: none;
+    background-color: rgba(176, 176, 228, 0.5);
+}
+
+
+
+.Information h1 {
+    font-size: 3em;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000;
+    color: #0077b6;
+
+}
+
+.Information h2{
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #0077b6;
+}
+
+.Information h1, .Information h2, .Journey-text, .interests-text, .skills-text {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s forwards 0.5s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.interests {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.interests-text{
+    flex: 1;
+    min-width: calc(50% - 1rem);
+}
+
+.interests img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px #000;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skills-text{
+    flex: 1;
+    min-width: calc(50% - 1rem);
+}
+
+.skills-pic img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px #000;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+
+
+
+
+
+/* Portfolio */
+
+
+
+@keyframes gradientBG {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-on-load, #all-projects h1, .Project1-image img {
+    animation: slideUp 0.8s ease-out forwards, fadeIn 1s ease forwards;
+}
+
+#Portfolio .banner, #all-projects h1 {
+    animation: gradientBG 10s ease infinite, fadeIn 2s ease forwards;
+}
+
+#Portfolio .banner {
+    background: linear-gradient(45deg, rgba(0, 0, 80, 0.7), rgba(0, 0, 0, 0.7), rgba(70, 120, 170, 0.7), rgba(145, 194, 194, 0.7), rgba(255, 255, 255, 0.7)), url('Zach.png');
+    background-size: 200% 200%, cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 2rem;
+    text-align: center;
+}
+
+#all-projects h1 {
+    animation: slideUp 1s ease-out forwards, fadeIn 2s ease forwards;
+    font-size: 3em;
+    text-align: center;
+    color: #0077b6; 
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 2rem;
+}
+
+.P1P2, .P3P4, .Project1-hold, .Project2-hold, .Project3-hold, .Project4-hold {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.Project1, .Project2, .Project3, .Project4 {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+    width: 45%;
+    transition: transform .2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.Project1:hover, .Project2:hover, .Project3:hover, .Project4:hover {
+    animation: none;
+    transform: scale(1.05);
+}
+
+.Project1-text, .Project2-text, .Project3-text, .Project4-text {
+    animation: fadeIn 1s ease forwards;
+    flex: 1;
+    min-width: calc(50% - 1rem);
+    padding: 1rem;
+}
+
+.Project2-hold, .Project3-hold, .Project4-hold {
+    flex-direction: row-reverse;
+}
+
+.Project1-image img, .Project2-image img, .Project3-image img, .Project4-image img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px #000;
+}
+
+.fab {
+    animation: fadeIn 1.5s ease forwards;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: color 0.4s;
+}
+
+.fas {
+    animation: fadeIn 1.5s ease forwards;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: color 0.4s;
+}
+
+.fab:hover {
+    color: #00528e;
+}
+
+.fas:hover {
+    color: #00528e;
+}
+
+.Project1 h2, .Project2 h2, .Project3 h2, .Project4 h2 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    color: #0077b6;
+    border-bottom: 2px solid #00528e;
+    padding-bottom: 0.5rem;
+
+
+    background-color: rgba(115, 127, 134, 0.2);
+    border-radius: 10px;
+}
+
+.Project1 p, .Project2 p, .Project3 p, .Project4 p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+.Projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.P1P2 {
+    order: 2;
+}
+
+.P3P4 {
+    order: 1;
+}
+
+
+
+
+
+
+/* Qualifications */
+
+
+
+#Qualifications .banner {
+    background: linear-gradient(45deg, rgba(0, 0, 80, 0.7), rgba(0, 0, 0, 0.7), rgba(70, 120, 170, 0.7), rgba(145, 194, 194, 0.7), rgba(255, 255, 255, 0.7)), url('Zach.png');
+    background-size: 200% 200%, cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 2rem;
+    text-align: center;
+}
+
+#Qualifications .banner {
+    animation: gradientBG 10s ease infinite, fadeIn 2s ease forwards;
+}
+
+
+#all-box1 {
+    
+    margin: 2rem;
+    
+}
+
+#all-box1 h1 {
+    animation: slideUp 1s ease-out forwards, fadeIn 2s ease forwards;
+    font-size: 3em;
+    text-align: center;
+    color: #0077b6;
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 2rem;
+}
+
+.Contain, .ContainTechnical, .ContainWhy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.Resume{
+    text-align: center;
+    border: 2px solid #0077b6;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1rem;
+    background-color: #f1f1f1;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    max-height: 55%;
+    margin: 0 auto;
+}
+
+.Technical, .Why {
+    text-align: center;
+    border: 2px solid #0077b6;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1rem;
+    background-color: #f1f1f1;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.Resume:hover, .Technical:hover, .Why:hover {
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2), -4px -4px 15px rgba(255, 255, 255, 0.2);
+    border: 2px solid #0056b3;
+    transform: scale(1.05);
+}
+
+.ResumePic {
+    max-width: 90%;
+    transition: all 0.3s ease;
+}
+
+.Resume:hover {
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2), -4px -4px 15px rgba(255, 255, 255, 0.2);
+    border: 2px solid #0056b3;
+    transform: scale(1.04);
+}
+
+.ResumePic:hover {
+    transform: scale(1.05);
+}
+
+.download-text {
+    font-size: 1em;
+    margin-top: 1.5rem;
+}
+
+.Technical-Text, .Why-Text1, .Why-Text2 {
+    text-align: left;
+    max-width: 80%;
+    box-sizing: border-box;
+    border: 2px solid #0077b6;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.Why h3, .Technical h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    width: 100%
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+
+.Technical h2, .Why h2 {
+    text-align: center;
+    width: 100%;
+    background-color: rgba(115, 127, 134, 0.2);
+    border-radius: 10px;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+    position: relative;
+    color: #0077b6;
+    border-bottom: 2px solid #00528e;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.Technical, .Why {
+    border: 2px solid #0077b6;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1rem;
+    background-color: #f1f1f1;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.allBox {
+    animation: slideUp 0.8s ease-out forwards, fadeIn 2s ease forwards;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+
+.Resume {
+    flex: 1;
+}
+
+.ContainTechnical, .ContainWhy {
+    flex: 1;
+}
+
+
+.Contain {
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+.right {
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+
+
+
+
+
+/* Service */
+
+
+.banner {
+    background: linear-gradient(45deg, rgba(0, 0, 80, 0.7), rgba(0, 0, 0, 0.7), rgba(70, 120, 170, 0.7), rgba(145, 194, 194, 0.7), rgba(255, 255, 255, 0.7)), url('Zach.png');
+    background-size: 200% 200%, cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 2rem;
+    text-align: center;
+    animation: gradientBG 10s ease infinite, fadeIn 2s ease forwards;
+}
+
+#all-box h1 {
+    animation: slideUp 1s ease-out forwards, fadeIn 2s ease forwards;
+    font-size: 3em;
+    text-align: center;
+    color: #0077b6;
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 2rem;
+}
+
+
+
+
+.teachella, .antique, .codingClub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    border: 2px solid #0077b6;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    background-color: #f1f1f1;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+}
+
+.teachella:hover, .antique:hover, .codingClub:hover {
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2), -4px -4px 15px rgba(255, 255, 255, 0.2);
+    border: 2px solid #0056b3;
+    transform: scale(1.05);
+}
+
+.teachella-text, .antique-text, .coding-text {
+    text-align: left;
+    max-width: 60%;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin: auto;
+    font-size: 25px;
+}
+
+
+.teachella-pic, .antique-pic, .coding-pic {
+    max-width: 50%;
+    text-align: center;
+}
+
+.teachella-pic img, .antique-pic img, .coding-pic img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+
+.teachella-pic:hover img, .antique-pic:hover img, .coding-pic:hover img {
+    transform: scale(1.05);
+}
+
+.coding-pic {
+    width: 35%;
+}
+
+.coding-pic img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px #000;
+}
+.antique-pic {
+    width: 35%;
+}
+
+.antique-pic img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px #000;
+}
+
+.teachella-pic {
+    width: 35%;
+}
+
+.teachella-pic img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px #000;
+}
+
+.teachella h2, .antique h2, .codingClub h2 {
+    text-align: center;
+    width: 100%;
+    background-color: rgba(115, 127, 134, 0.2);
+    border-radius: 10px;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+    position: relative;
+    color: #0077b6;
+    border-bottom: 2px solid #00528e;
+}
+
+
+.allservice {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+}
+
+.codingClub {
+    grid-column: span 2;
+}

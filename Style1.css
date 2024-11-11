@@ -1,0 +1,1134 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#Landing body {
+    background-attachment: fixed;
+}
+
+
+#toggleButton {
+    position: relative;
+    left: 200px;
+    background: linear-gradient(to right, #abb7d1, #0082c9);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Bubblegum', cursive;
+    font-weight: bold;
+    
+}
+  
+#toggleButton:hover {
+    background: linear-gradient(to right, #1E90FF, #010164);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+#toggleButton:active {
+    transform: scale(0.95);
+}
+
+#Landing .banner{
+
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25),rgba(255, 255, 255, 0.25)),url(A&MBack.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+
+#Landing .Bar{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #500000;
+    opacity: 1;
+    animation: fadeinBar 2s forwards;
+}
+
+.logo-link, ul, #toggleButton {
+    flex-shrink: 0;
+}
+
+
+
+
+.logo-link{
+    margin-right: 130px;
+}
+
+.logo{
+    width: 100px;
+    height: auto;
+}
+
+.Bar ul {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+}
+
+.Bar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px;
+    position: relative;
+}
+
+.Bar ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: "Times New Roman";
+
+}
+
+.Bar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #a7a7a7;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.Bar ul li:hover::after{
+    width: 100%;
+}
+
+
+
+
+.intro-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: calc(100vh - 100px);
+    animation: fadein 2s;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.intro-text span, .intro-text h1 {
+    display: block;
+}
+
+.intro-text {
+    text-align: right;
+    font-size: 2em;
+    color: #fff;
+}
+
+.intro-image img {
+    max-height: 700px;
+    max-width: 600px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px #000;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 35px;
+    color: #fff;
+    transition: color 0.4s;
+}
+
+.social-icons a:hover {
+    color: #a7a7a7;
+}
+
+
+
+.Information {
+    width: 100%;
+    position: relative;
+    padding: 50px 0;
+    background: #ffffffaa;
+    text-align: center;
+    color: #000000;
+    opacity: 0;
+    transition: opacity 2.5s ease;
+    
+}
+
+.fade-in{
+    opacity: 1;
+}
+
+
+.Information h1 {
+    font-size: 70px;
+    margin-top: 80px;
+    animation: popin 1s;
+}
+
+.Information p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    
+}
+
+.Information h2 {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #500000;
+    display: inline-block;
+}
+
+#about-me h1 {
+    margin-bottom: 60px;
+    font-size: 3rem;
+    text-transform: uppercase; 
+    text-align: center;
+    border-bottom: 3px solid #000000; 
+    padding-bottom: 0px;
+    display: inline-block;
+
+    background: linear-gradient(to right ,#500000,#500000);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+    -webkit-text-stroke: 1.25px black;
+}
+
+#about-me {
+    padding-top: 0px;  
+    background: #f2f2f2;
+}
+
+.Journey {
+    max-width: 90%; 
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: rgba(255, 255, 255, 0.8);  
+    border-radius: 10px;  
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.Journey h2, .Journey p{
+    margin: 0;
+    padding: 10px;
+}
+
+.Journey-text {
+    font-size: 1.2em;
+}
+
+.interests {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.interests h2, .interests p {
+    margin: 0;
+    padding: 10px;
+}
+
+
+
+
+.interests-text {
+    flex: 0 1 75%; 
+    width: 60%;
+    font-size: 1.2em;
+}
+
+.interests img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px #000;
+}
+
+
+.workout-image {
+    width: 400px; 
+    height: 450px;
+    object-fit: cover;
+    margin-right: 100px;
+}
+
+.skills {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills h2, .skills p{
+    margin: 0;
+    padding: 10px;
+}
+
+.skills-text {
+    width: 60%;
+    font-size: 1.2em;
+}
+
+.skills-pic {
+    width: 35%;
+}
+
+.skills-pic img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px #000;
+}
+
+
+
+
+
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes popin {
+    from { transform: scale(0.5); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeinBar {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
+/* Portfolio Page */
+
+#Portfolio{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8)),url(A&MBack.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#Portfolio .banner {
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    animation: fadeinBar 2s forwards;
+}
+
+
+#Portfolio .Bar{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #500000;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Projects {
+    width: 100%;
+    position: relative;
+    padding: 50px 0;
+
+    text-align: center;
+    color: #000000;
+    opacity: 1;
+    transition: opacity 2.5s ease;
+
+    
+}
+
+
+.Projects h1 {
+    font-size: 70px;
+    margin-top: 80px;
+    animation: popin 1s;
+}
+
+.Projects p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    
+}
+
+.Projects h2 {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #500000;
+    display: inline-block;
+}
+
+#Portfolio #all-projects h1 {
+    margin-bottom: 60px;
+    font-size: 3rem;
+    text-transform: uppercase; 
+    text-align: center;
+    border-bottom: 3px solid #000000; 
+    padding-bottom: 0px;
+    display: inline-block;
+
+    background: linear-gradient(to right ,#500000,#500000);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+    -webkit-text-stroke: 1.25px black;
+}
+
+#all-projects {
+    padding-top: 0px;  
+}
+
+
+.P1P2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Project1, .Project2 {
+    max-width: 50%;
+    width: 100%;
+    margin: 20px; 
+    padding: 20px; 
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    position: relative; 
+    overflow: hidden;
+    max-height: 200px;
+    transition: max-height 0.5s ease-in-out;
+}
+  
+.Project1:hover, .Project2:hover {
+    max-height: 1000px; 
+    z-index: 1; 
+}
+  
+.Project1 h2, .Project1 p, .Project2 h2, .Project2 p {
+    margin: 0;
+    padding: 10px;
+}
+  
+.Project1-hold {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+  
+.Project1-text {
+    text-align: center;
+    font-size: 1.2em;
+}
+  
+.Project1-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+
+.Project2-hold {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Project2-text {
+    flex: 1;
+    font-size: 1.2em;
+    max-width: 50%;  
+}
+
+.Project2-image {
+    flex: 1;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    transform: scale(1.25);
+}
+  
+.Project1-image img, .Project2-image img {
+    max-width: 100%; 
+    border-radius: 10px; 
+}
+
+/* P3 and P4 */
+
+.P3P4 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Project3, .Project4 {
+    max-width: 50%;
+    width: 100%;
+    margin: 20px; 
+    padding: 20px; 
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    position: relative; 
+    overflow: hidden;
+    max-height: 200px;
+    transition: max-height 0.5s ease-in-out;
+}
+  
+.Project3:hover, .Project4:hover {
+    max-height: 1000px; 
+    z-index: 1; 
+}
+  
+.Project3 h2, .Project3 p, .Project4 h2, .Project4 p {
+    margin: 0;
+    padding: 10px;
+}
+
+.Project3-hold {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Project3-text {
+    flex: 1;
+    font-size: 1.2em;
+    max-width: 50%;  
+    display: grid;
+    place-items: center;
+    height: 70vh;
+}
+
+.Project3-image {
+    flex: 1;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    transform: scale(0.90);
+}
+  
+.Project3-image img, .Project4-image img {
+    max-width: 100%; 
+    border-radius: 10px; 
+}
+
+  
+
+.Project4-hold {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Project4-text {
+    flex: 1;
+    font-size: 1.2em;
+    max-width: 50%;  
+    
+}
+
+.Project4-image {
+    flex: 1;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    transform: scale(1);
+}
+  
+.Project3-image img, .Project4-image img {
+    max-width: 100%; 
+    border-radius: 10px; 
+}
+
+
+
+
+/* QUALIFICATIONS PAGE */
+
+
+#Qualifications{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8),rgba(80, 0, 0, 0.7),rgba(80, 0, 0, 0.7),rgba(80, 0, 0, 0.7)),url(A&MBack.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#Qualifications .banner {
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    animation: fadeinBar 2s forwards;
+}
+
+
+#Qualifications .Bar{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #500000;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.page {
+    width: 100%;
+    position: relative;
+    padding: 50px 0;
+
+    text-align: center;
+    color: #000000;
+    opacity: 1;
+    transition: opacity 2.5s ease;
+
+    
+}
+
+
+.page h1 {
+    font-size: 70px;
+    margin-top: 80px;
+    animation: popin 1s;
+
+}
+
+.page p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    
+}
+
+.page h2 {
+    font-size: 2em;
+
+    border-bottom: 2px solid #500000;
+    display: inline-block;
+}
+
+#Qualifications #all-box1 h1 {
+    margin-bottom: 60px;
+    font-size: 3rem;
+    text-transform: uppercase; 
+    text-align: center;
+    border-bottom: 3px solid #000000; 
+    padding-bottom: 0px;
+    display: inline-block;
+
+    background: linear-gradient(to right ,#500000,#500000);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+    -webkit-text-stroke: 1.25px black;
+}
+
+#all-box1 {
+    padding-top: 0px;  
+}
+
+
+ /*.BothBox {} If both are needing the same change */
+
+.Contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Resume {
+    max-width: 60%;
+    width: 100%;
+    margin: 20px; 
+    padding: 70px; 
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    position: relative; 
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+
+.ResumePic {
+    width: 90%;
+    max-width: 100%;
+}
+
+.download-text {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.ContainTechnical {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Technical {
+    max-width: 70%;
+    width: 100%;
+    margin: 20px; 
+    padding: 70px; 
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    position: relative; 
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+
+}
+
+.Technical h2 {
+    margin-top: 0;
+}
+
+.Technical-Text{
+    padding-top: 10px;
+    padding-bottom: 0px;
+    flex: 1;
+    font-size: 1.2em;
+    max-width: 100%; 
+}
+
+
+.bold{
+    font-weight: bold;
+}
+
+
+.Why {
+    max-width: 70%;
+    width: 100%;
+    margin: 20px; 
+    padding: 70px; 
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    position: relative; 
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+
+}
+
+.Why2 {
+    display: flex;
+    flex-wrap: wrap; /
+}
+
+.ContainWhy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.Why h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.Why-Text1, .Why-Text2{
+    padding-top: 10px;
+    padding-bottom: 0px;
+    flex: 1;
+    font-size: 1.2em;
+    max-width: 100%; 
+}
+
+
+
+/* Service */
+
+#Service{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.7),rgba(80, 0, 0, 0.7),rgba(80, 0, 0, 0.7)),url(A&MBack.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#Service .banner {
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    animation: fadeinBar 2s forwards;
+}
+
+
+#Service .Bar{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #500000;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.page {
+    width: 100%;
+    position: relative;
+    padding: 50px 0;
+
+    text-align: center;
+    color: #000000;
+    opacity: 1;
+    transition: opacity 2.5s ease;
+
+    
+}
+
+
+.page h1 {
+    font-size: 70px;
+    margin-top: 80px;
+    animation: popin 1s;
+
+}
+
+.page p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    
+}
+
+.page h2 {
+    font-size: 2em;
+
+    border-bottom: 2px solid #500000;
+    display: inline-block;
+}
+
+#Service #all-box h1 {
+    margin-bottom: 60px;
+    font-size: 3rem;
+    text-transform: uppercase; 
+    text-align: center;
+    border-bottom: 3px solid #ffffff; 
+    padding-bottom: 0px;
+    display: inline-block;
+
+    background: linear-gradient(to right ,#ffffff,#ffffff);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+    -webkit-text-stroke: 1.25px black;
+}
+
+#all-box {
+    padding-top: 0px;  
+}
+
+
+
+
+.teachella {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1.0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teachella h2, .teachella p{
+    margin: 0;
+    padding: 10px;
+}
+
+.teachella-text {
+    width: 60%;
+    font-size: 1.2em;
+}
+
+.teachella-pic {
+    width: 35%;
+}
+
+.teachella-pic img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px #000;
+}
+
+
+
+.antique {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1.0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.antique h2, .antique p{
+    margin: 0;
+    padding: 10px;
+}
+
+.antique-text {
+    width: 60%;
+    font-size: 1.2em;
+}
+
+.antique-pic {
+    width: 35%;
+}
+
+.antique-pic img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px #000;
+}
+
+
+.codingClub {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1.0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coding h2, .coding p{
+    margin: 0;
+    padding: 10px;
+}
+
+.coding-text {
+    width: 60%;
+    font-size: 1.2em;
+}
+
+.coding-pic {
+    width: 35%;
+}
+
+.coding-pic img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px #000;
+}
+
+
+
+
+/* Gallery Page */
+
+#Gallery{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.7),rgba(80, 0, 0, 0.7),rgba(80, 0, 0, 0.7)),url(A&MBack.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#Gallery .banner {
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    animation: fadeinBar 2s forwards;
+}
+
+
+#Gallery .Bar{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #500000;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.page {
+    width: 100%;
+    position: relative;
+    padding: 50px 0;
+
+    text-align: center;
+    color: #000000;
+    opacity: 1;
+    transition: opacity 2.5s ease;
+
+    
+}
+
+
+.page h1 {
+    font-size: 70px;
+    margin-top: 80px;
+    animation: popin 1s;
+
+}
+
+.page p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    
+}
+
+.page h2 {
+    font-size: 2em;
+
+    border-bottom: 2px solid #500000;
+    display: inline-block;
+}
+
+#all-box h1 {
+    margin-bottom: 60px;
+    font-size: 3rem;
+    text-transform: uppercase; 
+    text-align: center;
+    border-bottom: 3px solid #ffffff; 
+    padding-bottom: 0px;
+    display: inline-block;
+
+    background: linear-gradient(to right ,#ffffff,#ffffff,#ffffff);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+    -webkit-text-stroke: 1.25px black;
+}
+
+#all-box {
+    padding-top: 0px;  
+}
+
+.gallery {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1.0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery h2, .gallery p{
+    margin: 0;
+    padding: 10px;
+}
+
+/* CAN CODE HERE ONWARD */
+
+.image-box {
+    flex-basis: calc(33.333% - 40px);  /* You can adjust this for your layout */
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-box img { /* Affect individual images */
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.image-description { /* Added description below images */
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.gallery {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+

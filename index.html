@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Landing Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="stylesheetID" link rel="stylesheet" href="Style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body id = "Landing">
+    <div class="banner">
+        <div class="Bar">
+            <a href="https://www.tamu.edu" class="logo-link">
+                <img src="InteractivePhotos/A&MIcon.png" alt="A&M Logo" class="logo">
+            </a>
+            <button id="toggleButton" style="margin: 10px;">Switch Style</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="Qualifications.html">Qualifications</a></li>
+                <li><a href="Service.html">Service</a></li>
+                <li><a href="Gallery.html">Personal Gallery</a></li>
+            </ul>
+        </div>
+        <div class="intro-section">
+            <div class="intro-text">
+                <span>Howdy I'm</span>
+                <h1>Jacob Quintero</h1>
+                <span>- Computer Engineer</span>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/JacobQuintero/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Jquintero08" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:jquintero0802@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="intro-image">
+                <img src="InteractivePhotos/JacobProfessional.png" alt="Profile">
+            </div>
+        </div>
+    </div>
+
+    <div id="about-me" class="Information">
+        <h1>About Me</h1>
+        <div class = "Journey">
+            <h2>My Journey</h2>
+            <div class = "Journey-text">
+                <p>Hello, my name is Jacob Quintero and I'm currently studying at Texas A&M University, aiming to graduate in the Fall of 2024 with a degree in Computer Engineering. Originally, I was born in Houston, Texas, but after a few years, my family and I moved to San Antonio, also known as the 210. I spent my formative years there and graduated from <a href="https://www.neisd.net/johnson" target="_blank">Claudia Taylor Johnson High School (CTJHS)</a> in 2020, right when COVID-19 began. My initial plan was to start at Texas A&M in the Fall of 2020, but due to some family issues, I stayed in San Antonio and attended the <a href="https://www.utsa.edu/" target="_blank">University of Texas at San Antonio (UTSA)</a> for a year. However, I always knew this wasn't my final stop. I aimed to move to College Station in the Fall of 2021, but I was missing a required class to transfer. So, I enrolled at <a href="https://www.blinn.edu/bryan/index.html" target="_blank">Blinn College - Bryan</a> for a semester to complete it. Starting in Spring 2022, I successfully made the switch to Texas A&M University and joined their Computer Engineering department. Since then, I've been focusing on being the best student I can be, while also working on expanding my network and building long-lasting friendships.</p>
+            </div>
+        </div>
+        
+        <div class = "interests">
+            <div class = "interests-text">
+                <h2>Interests</h2>
+                <p>In my free time, I enjoy improving my physical health through regular workouts and engaging in video games with my friends whenever time allows. I'm also passionate about learning new skills that will serve me well in the industry. Currently, I'm directing my efforts towards familiarizing myself with REST API and integrating this skill with my existing knowledge. </p>
+            </div>
+            <img src="InteractivePhotos/Workout.png" alt="Me working out" class="workout-image">
+        </div>
+        <div class="skills">
+            <div class = "skills-text">
+                <h2>Skills</h2>
+                <p>I also have a natural skill for cultivating new relationships with people, thanks to my outgoing personality. This skill shines bright, particularly in group settings, where my outgoing personality allows me to form quick and great connections with my groupmates and then quickly begin work. The ability to bounce ideas off others in a team-based environment is also a big bonus because it allows me to bounce ideas off others which leads to me helping in producing higher-quality products. However, my versatility extends to solo work as well. Once I get the ball rolling, I can focus on my work for hours without distractions.</p>
+                <p>When it comes to work ethic, I'm definitely at the top of the list. If you were to ask anyone who has worked with me, they'd confirm that not only do I complete my work early, but I also finish it to an exceptionally high standard. This unrelenting commitment to excellence is one of the cornerstones of my profession and personal life.</p>
+            </div>
+            <div class = "skills-pic">
+                <img src="InteractivePhotos/groupPic.jpg" class="skills-image">
+            </div>
+        </div>
+
+        <div class="about-pictures">
+
+        </div>
+    </div>
+
+    <script>
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom >= 0
+            );
+        }
+
+        const aboutMe = document.getElementById('about-me');
+
+        window.addEventListener('scroll', function() {
+            if (isInViewport(aboutMe)) {
+                aboutMe.classList.add('fade-in');
+            }
+        });
+    </script>
+
+    <script src="Toggle.js"></script>
+
+</body>
+</html>
